@@ -1,6 +1,7 @@
 :root {
     --primary-color: #ec1f55;
     --text-color: #333;
+    --white-color: #fff;
 }
 
 * {
@@ -60,7 +61,7 @@ header h4 {
 }
 
 header h2 {
-    color: var(--text-color);
+    color: var(--white-color);
     font-size: 20px;
 }
 
@@ -118,7 +119,7 @@ header h2 {
     width: 100%;
     -webkit-appearance: none;
     height: 6px;
-    background: #d3d3d3;
+    background: #fcfafa;
     outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
@@ -137,6 +138,14 @@ header h2 {
 .time-song {
     display: flex;
     justify-content: space-between;
+}
+
+.currentTime {
+    color: var(--white-color);
+}
+
+.songduration {
+    color: var(--white-color);
 }
 
 

@@ -129,7 +129,7 @@ const app = {
             transform: 'rotate(360deg)'
         }], {
             duration: 10000,
-            interations: Infinity
+            iterations: Infinity
         })
         cdThumbAnimate.pause()
 
@@ -251,35 +251,7 @@ const app = {
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;
         audio.src = this.currentSong.path;
     },
-    formatTime: function(sec_num) {
-        let hours = Math.floor(sec_num / 3600);
-        let minutes = Math.floor((sec_num - hours * 3600) / 60);
-        let seconds = Math.floor(sec_num - hours * 3600 - minutes * 60);
 
-        hours = hours < 10 ? (hours > 0 ? '0' + hours : 0) : hours;
-
-        if (minutes < 10) {
-            minutes = '0' + minutes;
-        }
-        if (seconds < 10) {
-            seconds = '0' + seconds;
-        }
-        return (hours !== 0 ? hours + ':' : '') + minutes + ':' + seconds;
-    },
-    // hiển thị thời gian bài hát hiện tại
-    timeCurrent: () => {
-        setInterval(() => {
-            let cur = this.formatTime(audio.duration)
-            musicStartTime.textContent = `${cur}`;
-        }, 100)
-    },
-    //hiển thị thời gian bài hát
-    timeDuration: () => {
-        if (audio.duration) {
-            let dur = this.formatTime(audio.duration)
-            musicDuration.textContent = `${dur}`;
-        }
-    },
     loadConfig: function() {
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
@@ -298,7 +270,35 @@ const app = {
             }
         this.loadCurrentSong();
     },
+    formatTime: function(sec_num) {
+        let hours = Math.floor(sec_num / 3600);
+        let minutes = Math.floor((sec_num - hours * 3600) / 60);
+        let seconds = Math.floor(sec_num - hours * 3600 - minutes * 60);
 
+        hours = hours < 10 ? (hours > 0 ? '0' + hours : 0) : hours;
+
+        if (minutes < 10) {
+            minutes = '0' + minutes;
+        }
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+        }
+        return (hours !== 0 ? hours + ':' : '') + minutes + ':' + seconds;
+    },
+    // hiển thị thời gian bài hát hiện tại
+    timeCurrent: function() {
+        setInterval(() => {
+            let cur = this.formatTime(audio.currentTime)
+            musicStartTime.textContent = `${cur}`;
+        }, 100)
+    },
+    //hiển thị thời gian bài hát
+    timeDuration: function() {
+        if (audio.duration) {
+            let dur = this.formatTime(audio.duration)
+            musicDuration.textContent = `${dur}`;
+        }
+    },
     playRandomSong: function() {
         let checkIndex = [0]
         let newIndex
