@@ -58,37 +58,22 @@ const app = {
             path: './assets/music/ChoMinhEm-Binz-6330310.mp3'
         },
         {
-            name: 'Bỏ túi',
-            singer: 'B-wine & Vsoul',
+            name: 'Tầng Tầng Lớp Love',
+            singer: 'Vsoul',
             image: './assets/img/img1.jpg',
-            path: './assets/music/VSOUL BWINE  Bỏ Túi Rap Việt mùa 2  AUDIO .mp3'
-        }, {
-            name: 'Tặng Một Món Quà',
-            singer: 'Phaos & J Jade',
-            image: './assets/img/img1.jpg',
-            path: './assets/music/y2mate.com - Phaos VS J Jade  Tặng Một Món Quà  Team Wowy  Rap Việt  Mùa 2 MV Lyrics.mp3'
-        }, {
-            name: 'Ex\'s hate me',
-            singer: 'Bray',
-            image: './assets/img/img2.jpg',
-            path: './assets/music/ExsHateMe.mp3'
+            path: './assets/music/y2mate.com - Vsoul  Tầng Tầng Lớp Love  Team Rhymastic  Rap Việt  Mùa 2 MV Lyrics.mp3'
         },
         {
-            name: 'Nghe  Nói',
-            singer: 'Pjpo & Obito',
-            image: './assets/img/img1.jpg',
-            path: './assets/music/y2mate.com - Pjpo VS Obito  Nghe  Nói  Team Binz  Rap Việt  Mùa 2 MV Lyrics.mp3'
+            name: '夜に駆ける',
+            singer: 'YOASOBI',
+            image: './assets/img/img4.png',
+            path: './assets/music/YOASOBI夜に駆ける Official Music Video.mp3'
         }, {
-            name: '101520',
-            singer: 'Sol7 & Pretty XIX',
-            image: './assets/img/img1.jpg',
-            path: './assets/music/y2mate.com - Sol7 VS Pretty XIX  101520  Team Binz  Rap Việt  Mùa 2 MV Lyrics.mp3'
-        }, {
-            name: 'Cho mình em',
-            singer: 'Binz & Đen Vâu',
-            image: './assets/img/img3.jpg',
-            path: './assets/music/ChoMinhEm-Binz-6330310.mp3'
-        }
+            name: 'Lemon',
+            singer: 'Kenshi Yonezu',
+            image: './assets/img/5.jpg',
+            path: './assets/music/Lemon.mp3'
+        },
 
     ],
     setConfig: function(key, value) {
